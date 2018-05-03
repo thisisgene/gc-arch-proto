@@ -1,0 +1,61 @@
+$gridWidth: 60vw
+$itemBaseHeight: $gridWidth / 5 * 10 / 15
+
+section#home
+  background: white
+  height: 100vh
+
+  header
+    width: $gridWidth
+    margin: 1rem auto 2rem
+    padding: 0 2px
+    box-sizing: border-box
+
+    h1
+      font-size: 2.6rem
+      line-height: 1
+      margin: 0
+
+    .menu-container
+      a
+        margin-right: 2rem
+        font:
+          size: .9rem
+          weight: bold
+        text-decoration: none
+        color: black
+
+        &.active
+          text-decoration: underline
+  .grid
+    width: $gridWidth
+    margin: 0 auto
+    background: white
+    .grid-item
+      width: 20%
+      height: $itemBaseHeight
+      background: pink
+      border: 2px solid white
+      box-sizing: border-box
+      &--width-2
+        width: 40%
+      &--width-3
+        width: 60%
+      &--height-2
+        height: $itemBaseHeight * 2
+      &--height-3
+        height: $itemBaseHeight * 3
+      &--height-4
+        height: $itemBaseHeight * 4
+
+      &.is-dragging, &.is-positioning-post-drag
+        background: green
+        z-index: 2
+
+      img
+        width: 100%
+        height: 100%
+
+    .packery-drop-placeholder
+      outline: 4px dashed #ddd
+      outline-offset: -8px
